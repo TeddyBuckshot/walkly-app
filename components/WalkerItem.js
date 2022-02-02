@@ -35,12 +35,14 @@ const styles = StyleSheet.create({
     },
     walkerItem: {
         height: 200,
+        marginVertical: 10,
         margin: 10,
         backgroundColor: '#f5f5f5',
         borderRadius: 10,
         overflow: 'hidden',
         borderColor: 'black',
         borderWidth: 1,
+        elevation: 8,
 
     },
     walkerHeader: {

@@ -30,7 +30,7 @@ export default function App() {
     )
   }
 
-  return <HomeNavigation />;
+  return <HomeNavigation><StatusBar style="auto" /></HomeNavigation>;
 }
 
 const styles = StyleSheet.create({

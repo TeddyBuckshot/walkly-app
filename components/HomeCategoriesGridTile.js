@@ -3,13 +3,15 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, TouchableN
 
 const HomeCategoriesGridTile = props => {
     return (
-        <TouchableOpacity
-            style={styles.gridItem}
-            onPress={props.onSelect}>
-            <View style={{...styles.container, ...{backgroundColor: props.color}}}>
-                <Text style={styles.title} numberOfLines={2}>{props.title}</Text>
-            </View>
-        </TouchableOpacity>
+        <View style={styles.gridItem}>
+            <TouchableOpacity
+                style={{ flex: 1 }}
+                onPress={props.onSelect}>
+                <View style={{ ...styles.container, ...{ backgroundColor: props.color } }}>
+                    <Text style={styles.title} numberOfLines={2}>{props.title}</Text>
+                </View>
+            </TouchableOpacity>
+        </View>
     )
 };
 
@@ -19,13 +21,13 @@ const styles = StyleSheet.create({
         margin: 15,
         height: 150,
         borderRadius: 10,
+        elevation: 8,
         overflow: 'hidden'
-
     },
     container: {
         flex: 1,
         borderRadius: 10,
-        elevation: 6,
+
         padding: 10,
         justifyContent: 'flex-start',
         alignItems: 'center'
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: 'open-sans-bold',
         fontSize: 12,
-        textAlign:'right'
+        textAlign: 'right'
     }
 });
 
